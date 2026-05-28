@@ -2,7 +2,7 @@
 
 echo "Starting .NET API"
 
-cd /var/www/dotnetapi
+cd /home/ubuntu/app
 
 pkill dotnet || true
 
