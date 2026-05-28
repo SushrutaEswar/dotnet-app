@@ -2,4 +2,4 @@
 
 echo "Installing application"
 
-mkdir -p /var/www/dotnetapietapi
+mkdir -p /home/ubuntu/app
