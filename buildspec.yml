@@ -1,0 +1,29 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      dotnet: 8.0
+
+<<<<<<< HEAD
+  pre_build:
+    commands:
+      - echo Restore started
+      - cd src
+      - dotnet restore
+
+=======
+>>>>>>> e6b3a45a5217a2a760fed8d371b003b3eae7a871
+  build:
+    commands:
+      - echo Build started
+
+      # IMPORTANT: use correct csproj path (adjust name if needed)
+      - dotnet restore src/DotNetMinimalProject/DotNetMinimalProject.csproj
+
+      - dotnet publish src/DotNetMinimalProject/DotNetMinimalProject.csproj -c Release -o output
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: output

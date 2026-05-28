@@ -1,0 +1,23 @@
+version: 0.0
+os: linux
+
+files:
+  - source: .
+    destination: /var/www/dotnetapi
+
+hooks:
+  ApplicationStop:
+    - location: scripts/stop_server.sh
+      timeout: 300
+
+  BeforeInstall:
+    - location: scripts/install.sh
+      timeout: 300
+
+  ApplicationStart:
+    - location: scripts/start_server.sh
+      timeout: 300
+
+  ValidateService:
+    - location: scripts/validate_service.sh
+      timeout: 300sh
