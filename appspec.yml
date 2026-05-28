@@ -3,7 +3,7 @@ os: linux
 
 files:
   - source: src/output
-    destination: /var/www/dotnetapi
+    destination: /home/ubuntu/app
 
 hooks:
   ApplicationStop:
